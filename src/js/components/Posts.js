@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getData } from "../actions/index";
+import { getDataThunk } from "../actions/index";
 
 export class Post extends Component {
   componentDidMount() {
-    this.props.getData();
+    this.props.getDataThunk();
   }
   render() {
     return (
@@ -25,5 +25,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { getData }
+  { getDataThunk }
 )(Post);
